@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "hack_backend": {
+      "main": "src/hack_backend/main.mo",
+      "type": "motoko"
+    },
+    "hack_frontend": {
+      "dependencies": [
+        "hack_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/hack_frontend/src/index.html"
+      },
+      "source": [
+        "src/hack_frontend/assets",
+        "dist/hack_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
